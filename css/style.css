@@ -1,0 +1,438 @@
+:root {
+    --brand-color: #EF0633;
+    --brand-color-light: #F99BAD;
+    --primary-color: #fff;
+    --text-color: #565656;
+    --bar-height: 72px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    overflow-x: hidden;
+}
+
+.mt {
+    margin-top: 1.5rem;
+}
+.mt-sm {
+    margin-top: 0.8rem;
+}
+
+.blue {
+    background-color: #0057DA;
+}
+.red {
+    background-color: #EF0633;
+}
+.green {
+    background-color: #00BA34;
+}
+
+.light-red {
+    background-color: rgba(239,6,51,0.7);
+}
+.light-black {
+    background-color: rgba(33,34,35,0.7);
+}
+
+/* ===header section style=== */
+.header {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/shutterstock_12.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 35%;
+    color: var(--primary-color);
+
+}
+
+.header-section {
+    padding-top: var(--bar-height);
+}
+
+/* ===hero-section styles=== */
+.hero-content-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content > p {
+    font-size: 0.8rem;
+}
+
+.hero-social-links-container {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-social-links {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.1rem 0;
+    font-size: 0.8rem;
+}
+
+/* ===Nav Bar section=== */
+.bar {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bar-height);
+    padding: 0 1rem;
+}
+
+.bar-bg {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5));
+}
+
+.bar-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.bar-brand-logo {
+    height: 100%;
+}
+.bar-brand-logo > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bar-nav-toggle {
+    cursor: pointer;
+}
+
+.fa-bars {
+    color: var(--primary-color);
+    font-size: 2em;
+}
+.fa-bars:active {
+    transform: scaleY(1.5);
+}
+
+#inpNavToggle {
+    display: none;
+}
+
+#inpNavToggle:checked ~ .nav {
+    display: flex;
+}
+
+.nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: var(--bar-height);
+    left: 0;
+    width: 100%;
+    height: calc(60vh - var(--bar-height));
+    padding: 2rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-weight: 700;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.nav-link:not(:last-child) {
+    border-bottom: 1px solid var(--brand-color-light);
+}
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+
+/* ===main section styling=== */
+.main {
+    margin-top: 3rem;
+    position: relative;
+}
+.feature-one,
+.feature-two,
+.feature-three,
+.feature-four {
+    padding: 3rem 2rem;
+}
+
+.sections-head {
+    color: var(--brand-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--brand-color-light);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.25s ease-in;
+}
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* ===feature one- about us section=== */
+
+.about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1 1;
+}
+
+.about-img-wrapper {
+    width: 100%;
+}
+.about-img {
+    width: 100%;
+}
+
+.about-objective-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.about-objectives {
+    background-color: var(--brand-color-light);
+    color: var(--brand-color);
+    padding: 1rem;
+    border-radius: 3px;
+}
+.about-objectives:first-child {
+    margin-right: 1rem;
+}
+
+.more-btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+    background-color: var(--brand-color);
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+.more-btn:hover {
+    color: var(--brand-color);
+    background-color: var(--primary-color);
+}
+
+.more-btn > .fas {
+    padding-left: 0.3rem;
+    font-size: 0.8rem;
+}
+
+/* ===feature two style- packages section=== */
+
+.package-item {
+    position: relative;
+    margin: 1.5rem 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.package-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.package-img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.package-cat {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 5%;
+    left: o;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+
+.package-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.package-price {
+    color: var(--brand-color);
+    font-weight: 700;
+}
+.package-details > button {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--text-color);
+}
+
+.package-more-btn-wrap {
+    display: grid;
+    place-items: center;
+}
+
+/* ===feature three style- knowledge section=== */
+.knowledge-section {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images//shutterstock_14.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.knowledge-card {
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* ===feature five- blog section=== */
+
+.blog-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(242,242,242,0.3);
+    color: var(--brand-color);
+}
+.blog-note-wrap {
+    flex-grow: 2;
+    padding: 0.75rem;
+}
+
+.blog-date {
+    font-weight: 0.75rem;
+    color: var(--text-color);
+}
+.blog-img-wrap {
+    flex-grow: 1;
+}
+.blog-img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===chat-with-us style=== */
+.chat-wrap {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--brand-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat {
+    text-decoration: none;
+    color: var(--brand-color);
+}
+
+.chat-icon {
+    background-color: var(--brand-color);
+    color: var(--primary-color);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 0.2rem;
+    padding: 0.4rem;
+}
+
+/* ===footer section style=== */
+.footer {
+    background-color: var(--brand-color);
+    color: var(--primary-color);
+    padding: 2rem;
+}
+
+.footer-link-wrap {
+    list-style: none;
+}
+
+.footer-link-list:not(:last-child) {
+    border-bottom: 1px solid var(--brand-color-light);
+    padding: 0.3rem 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+/* web-rights */
+.web-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.75rem;
+}
+/* footer-socials */
+.footer-social-links {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0 0.1rem;
+    font-size: 0.75rem;
+}
+.footer-social-links:hover {
+    color: var(--brand-color-light);
+}
